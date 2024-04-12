@@ -1,0 +1,28 @@
+@font-face {
+    font-family: Roboto;
+    src: url('./fonts/RobotoFlex-VariableFont_GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf') format('truetype'),
+   
+}
+
+@font-face {
+    font-family: Playfair;
+    src: url('./fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+}
+
+.test-roboto {
+    font-family: Roboto;
+}
+
+.test-playfair {
+    font-family: Playfair;
+}
+
+.test-person {
+    width: 25%;
+    height: 25%;
+}
+
+.icon-box {
+    height: 40px;
+    width: 40px;
+}
