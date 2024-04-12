@@ -1,3 +1,10 @@
+:root {
+    --icon-size: 20px;
+    --standard-gap: 10px;
+    --standard-padding: 20px;
+}
+
+
 @font-face {
     font-family: Roboto;
     src: url('./fonts/RobotoFlex-VariableFont_GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf') format('truetype'),
@@ -9,20 +16,103 @@
     src: url('./fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
 }
 
-.test-roboto {
+html {
     font-family: Roboto;
 }
 
-.test-playfair {
+header {
+    display: flex;
+    gap: var(--standard-gap);
+    padding: var(--standard-padding);
+    background-color: brown;
+}
+
+.profile-pic-container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+.profile-name,
+.about-me,
+.my-work,
+.project-name,
+.contact-me {
     font-family: Playfair;
 }
 
-.test-person {
-    width: 25%;
-    height: 25%;
+.profile-name {
+    position: absolute;
+    bottom: 8px;
 }
 
-.icon-box {
-    height: 40px;
-    width: 40px;
+.profile-pic {
+    width: 150px;
+}
+
+.icon {
+    height: var(--icon-size);
+    width: var(--icon-size);
+}
+
+section {
+    padding: var(--standard-padding);
+    background-color:cadetblue
+}
+
+.project-container {
+    display: grid;
+    gap: calc(var(--standard-gap) * 2);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.project {
+    background-color: aqua;
+}
+
+.project-git-link {
+    height: var(--icon-size);
+    width: var(--icon-size);
+}
+
+.project-name {
+    font-size: 1rem;
+}
+
+.project-img-container {
+    height: 100px;
+}
+
+.project-contents {
+    padding: 8px;
+}
+
+.project-link-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--standard-gap);
+}
+
+.contact-icon-only {
+    display: flex;
+    gap: var(--standard-gap);
+}
+
+.footer-img {
+    width: 300px;
+}
+
+footer {
+    display: flex;
+    gap: calc(2 * var(--standard-gap));
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--standard-padding);
+    background-color: beige;
 }
