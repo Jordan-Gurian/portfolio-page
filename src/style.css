@@ -21,17 +21,14 @@ html {
 }
 
 header {
-    display: flex;
-    gap: var(--standard-gap);
     padding: var(--standard-padding);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--standard-gap);
     background-color: brown;
+    align-items: center;
+    justify-content: center;
 }
-
-.profile-pic-container {
-    position: relative;
-    text-align: center;
-    color: white;
-  }
 
 .profile-name,
 .about-me,
@@ -41,20 +38,33 @@ header {
     font-family: Playfair;
 }
 
+.profile-pic-container {
+    position: relative;
+}
+
 .profile-name {
     position: absolute;
-    bottom: 8px;
-    text-align: center;
-    left: 8px;
     font-size: 3rem;
     font-weight: bold;
+    z-index: 3;
+    color: white;
+    bottom: 12px;
+    left: 16px;
 }
 
 .profile-pic {
-    /* height: 300px; */
-    width: 300px;
+    width: 50vw;
     object-fit: cover;
+    z-index: 2; 
 }
+
+.profile-bio-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--standard-gap);
+    width: 100vw;
+}
+
 
 .icon {
     height: var(--icon-size);
@@ -63,7 +73,7 @@ header {
 
 section {
     padding: var(--standard-padding);
-    background-color:cadetblue
+    background-color:cadetblue;
 }
 
 .project-container {
@@ -111,7 +121,7 @@ section {
 }
 
 .footer-img {
-    width: 450px;
+    width: 50vw;
 }
 
 footer {
@@ -123,70 +133,20 @@ footer {
     background-color: beige;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px) { 
     header {
-        flex-wrap: wrap;
-        padding: calc(var(--standard-padding) / 2)
+        padding: calc(var(--standard-padding) / 2);
+    }
+
+    .profile-bio,
+    .about-me {
+        margin: 0 auto;
     }
 
     .profile-pic {
         width: calc(100vw - var(--standard-padding));
         object-fit: cover;
     }
-    
-    /* .icon {
-        height: var(--icon-size);
-        width: var(--icon-size);
-    }
-    
-    section {
-        padding: var(--standard-padding);
-        background-color:cadetblue
-    } */
-    
-    /* .project-container {
-        display: grid;
-        gap: calc(var(--standard-gap) * 2);
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    } */
-    
-    /* .project {
-        background-color: aqua;
-    }
-    
-    .project-git-link {
-        height: var(--icon-size);
-        width: var(--icon-size);
-    }
-    
-    .project-name {
-        font-size: 1rem;
-    } */
-/*     
-    .project-img-container {
-        height: 100px;
-    }
-    
-    .project-contents {
-        padding: 8px;
-    } */
-    
-    /* .project-link-line {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    
-    .contact-links {
-        display: flex;
-        flex-direction: column;
-        gap: var(--standard-gap);
-    }
-    
-    .contact-icon-only {
-        display: flex;
-        gap: var(--standard-gap);
-    } */
 
     .footer-left {
         padding: var(--standard-padding);
@@ -203,4 +163,27 @@ footer {
         padding: 0;
         background-color: beige;
     }
+}
+
+@media (min-width: 600px) {
+    header {
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+    
+
+
+    .profile-pic {
+        /* height: 300px; */
+        width: 50vw;
+        object-fit: cover;
+        z-index: 2
+    }
+    
+    .profile-bio-container {
+        margin: 20px 0px 20px -40px;
+        padding: calc(var(--standard-padding) * 2);
+        background-color: lightgreen;
+        align-items: end;
+        }
 }
