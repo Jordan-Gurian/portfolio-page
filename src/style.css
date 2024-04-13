@@ -53,7 +53,7 @@ header {
 }
 
 .profile-pic {
-    width: 50vw;
+    width: min(50vw, 400px);
     object-fit: cover;
     z-index: 2; 
 }
@@ -79,11 +79,12 @@ section {
 .project-container {
     display: grid;
     gap: calc(var(--standard-gap) * 2);
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 .project {
     background-color: aqua;
+    height: 300px;
 }
 
 .project-git-link {
@@ -96,7 +97,7 @@ section {
 }
 
 .project-img-container {
-    height: 100px;
+    height: 200px;
 }
 
 .project-contents {
@@ -121,7 +122,7 @@ section {
 }
 
 .footer-img {
-    width: 50vw;
+    width: min(50vw, 400px);
 }
 
 footer {
@@ -170,12 +171,8 @@ footer {
         justify-content: center;
         flex-wrap: nowrap;
     }
-    
-
 
     .profile-pic {
-        /* height: 300px; */
-        width: 50vw;
         object-fit: cover;
         z-index: 2
     }
